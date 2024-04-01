@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: October 7, 2022 -->
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap"
+    media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print"
+    onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css"
+    integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg=="
+    crossorigin="anonymous" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/wowchemy.6cd6d51f63e37d7b39117985b4040f0a.css" />
+  <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print"
+    onload="this.media='all'">
+  <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'"
+    disabled>
+  <meta name="author" content="Min An" />
+  <meta name="description" content="A PhD in Robotics" />
+  <link rel="alternate" hreflang="en-us" href="https://anminnuo.github.io/" />
+  <link rel="canonical" href="https://anminnuo.github.io/" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" type="image/png"
+    href="/media/icon_hu04041fa2424d3f847c76b598ce521e02_94882_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png"
+    href="/media/icon_hu04041fa2424d3f847c76b598ce521e02_94882_180x180_fill_lanczos_center_3.png" />
+  <meta name="theme-color" content="#3f51b5" />
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:site" content="@anminnuo" />
+  <meta property="twitter:creator" content="@anminnuo" />
+  <meta property="twitter:image"
+    content="https://anminnuo.github.io/media/icon_hu04041fa2424d3f847c76b598ce521e02_94882_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:site_name" content="Min An" />
+  <meta property="og:url" content="https://anminnuo.github.io/" />
+  <meta property="og:title" content="Min An" />
+  <meta property="og:description" content="A PhD in Robotics" />
+  <meta property="og:image"
+    content="https://anminnuo.github.io/media/icon_hu04041fa2424d3f847c76b598ce521e02_94882_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:locale" content="en-us" />
+  <meta property="og:updated_time" content="2030-06-01T13:00:00&#43;00:00" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://anminnuo.github.io/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "url": "https://anminnuo.github.io/"
+}
+</script>
+<script>
+  $(document).ready(function() {  
+  $('#citationFormat').change(function() {  
+    var selectedFormat = $(this).val();  
+    var filename;  
+    if (selectedFormat === 'bibtex') {  
+      filename = 'cite.bib';  
+    } else if (selectedFormat === 'ris') {  
+      filename = 'cite.ris';  
+    }  
+    $('#citeLink').attr('data-filename', filename);  
+
+    });  
+  });  
+
+</script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+ <style>
+  .school-logo {  
+    float: left; /* 让校徽浮动到左边 */  
+    margin-right: 10px; /* 在校徽和描述之间添加一些间距 */  
+}  
+  
+.logo {  
+    width: 30px; /* 设置校徽的宽度 */  
+    height: 30px; /* 设置校徽的高度 */  
+    vertical-align: middle; /* 垂直居中 */  
+}
+ </style>
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Min An" />
+  <title>Min An</title>
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper   ">
+  <script src="/js/wowchemy-init.min.7532de8e15162845d694f17af8b46a99.js"></script>
+  <aside class="search-modal" id="search">
+    <div class="container">
+      <section class="search-header">
+        <div class="row no-gutters justify-content-between mb-3">
+          <div class="col-6">
+            <h1>Search</h1>
+          </div>
+          <div class="col-6 col-search-close">
+            <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted"
+                aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div id="search-box">
+          <input name="q" id="search-query" placeholder="Search..." autocapitalize="off" autocomplete="off"
+            autocorrect="off" spellcheck="false" type="search" class="form-control" aria-label="Search...">
+        </div>
+      </section>
+      <section class="section-search-results">
+        <div id="search-hits">
+        </div>
+      </section>
+    </div>
+  </aside>
+  <div class="page-header header--fixed">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+        <div class="container-xl">
+          <div class="d-none d-lg-inline-flex">
+            <a class="navbar-brand" href="/">Min An</a>
+          </div>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-content"
+            aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="fas fa-bars"></i></span>
+          </button>
+          <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+            <a class="navbar-brand" href="/">Min An</a>
+          </div>
+          <div class="navbar-collapse main-menu-item collapse justify-content-center" id="navbar-content">
+            <ul class="navbar-nav d-md-inline-flex">
+              <li class="nav-item">
+                <a class="nav-link " href="/#about" data-target="#about"><span>Home</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/#publications" data-target="#publications"><span>Publications</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/#review" data-target="#review"><span>Under Review</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/#experience" data-target="#experience"><span>Experience</span></a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link " href="/#Honors_and_Awards"><span>Honors and Awards</span></a>
+              </li> -->
+            </ul>
+          </div>
+          <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+            <li class="nav-item">
+              <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search"
+                  aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item dropdown theme-dropdown">
+              <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item js-set-theme-light">
+                  <span>Light</span>
+                </a>
+                <a href="#" class="dropdown-item js-set-theme-dark">
+                  <span>Dark</span>
+                </a>
+                <a href="#" class="dropdown-item js-set-theme-auto">
+                  <span>Automatic</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </div>
+  <div class="page-body">
+    <span class="js-widget-page d-none"></span>
+    <section id="about" class="home-section wg-about  ">
+      <div class="home-section-bg ">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <div id="profile">
+              <img class="avatar avatar-circle" width="270" height="270"
+                src="/authors/admin/avatar_huf3eeb96029b3a2cbd16af46fe4ec8c9e_84386_270x270_fill_q75_lanczos_center.jpg"
+                alt="Min An">
+              <div class="portrait-title">
+                <h2>Min An</h2>
+                <h3>Master Candidate</h3>
+                <h3>
+                  <a href="http://www.ynu.edu.cn/" target="_blank" rel="noopener">
+                    <span>Yunnan University (YNU)</span>
+                  </a>
+                </h3>
+              </div>
+              <ul class="network-icon" aria-hidden="true">
+                <li>
+                  <a href="mailto:kirinmin@hotmail.com" aria-label="envelope">
+                    <i class="fas fa-envelope big-icon"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://scholar.google.com/citations?hl=zh-CN&user=gcoI1hsAAAAJ" target="_blank"
+                    rel="noopener" aria-label="graduation-cap">
+                    <i class="fas fa-graduation-cap big-icon"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/anminnuo" target="_blank" rel="noopener" aria-label="github">
+                    <i class="fab fa-github big-icon"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.zhihu.com/people/kirinmin" target="_blank" rel="noopener" aria-label="zhihu">
+                    <i class="fab fa-zhihu big-icon"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://space.bilibili.com/86201899" target="_blank" rel="noopener" aria-label="bilibili">
+                    <i class="fab fa-bilibili big-icon"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/channel/UCt1bX4QQtIaKzM6ULo0CT9g" target="_blank" rel="noopener"
+                    aria-label="youtube">
+                    <i class="fab fa-youtube big-icon"></i>
+                  </a>
+                </li>
+              </ul>
+              <br>
+              <ul class="u2" aria-hidden="true">
+                <li>
+                  <a href="https://orcid.org/0009-0000-4769-1687" aria-label="envelope">
+                    <img
+                    src="/picture/orcid.logo.svg" width="56px" height="56px" alt="DJI" loading="lazy">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.researchgate.net/profile/Min-An-9?ev=hdr_xprf&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6ImhvbWUiLCJwb3NpdGlvbiI6Imdsb2JhbEhlYWRlciJ9fQ" target="_blank"
+                    rel="noopener" aria-label="graduation-cap">
+                    <img
+                    src="/picture/rg.svg" width="56px" height="56px" alt="DJI" loading="lazy">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-8">
+            <h1>About Me</h1>
+            <div class="article-style">
+              <p>A master's candidate at the School of Software, Yunnan University,  who is passionate about deep learning collaborative blockchain, focusing on utilizing deep learning methods to make blockchains work better. I am currently engaged in research that explores the use of reinforcement learning methods to optimize blockchain performance within an IoT framework.
+              <br>
+              My research interests encompass a wide range of topics including reinforcement learning, time series forecasting, blockchain technology, IoT, and federated learning.
+              <br>
+              For more information about my work, please refer to platforms such as [<a href="https://www.researchgate.net/profile/Min-An-9?ev=hdr_xprf&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6ImhvbWUiLCJwb3NpdGlvbiI6Imdsb2JhbEhlYWRlciJ9fQ">Researchgate</a>] and [<a href="https://orcid.org/0009-0000-4769-1687">ORCID</a>].
+            </p>
+              <i class="fas fa-download  pr-1 fa-fw"></i> Download my
+              <a href="/uploads/CV(Min An)20230610.pdf" target="_blank">Simple CV</a>
+              .</p>
+            </div>
+            <div class="row">
+              <div class="col-md-5">
+                <div class="section-subheading">Interests</div>
+                <ul class="ul-interests mb-0">
+                  <li>Reinforcement Learning</li>
+                  <li>Blockchain</li>
+                  <li>IoT</li>
+                </ul>
+              </div>
+              <div class="col-md-7">
+                <div class="section-subheading">Education</div>
+                <ul class="ul-edu fa-ul mb-0">
+                  <li>
+                    <i class="fa-li fas fa-graduation-cap"></i>
+                    <div class="description">
+                      <div class="school-logo">  
+                        <img src="picture/ynu2.png" alt="Yunnan University Logo" class="logo">  
+                    </div>  
+                      <p class="course">MA.Sc/MPhil in Artificial Intelligence and Machine Learning, School of Software,
+                        2022-2025</p>
+                      <p class="institution">Yunnan University (YNU)</p>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa-li fas fa-graduation-cap"></i>
+                    <div class="description">
+                      <div class="school-logo">  
+                        <img src="picture/xbmu1.png" alt="Northwest Minzu University Logo" class="logo">  
+                    </div>  
+                      <p class="course">B.E in Computer Science and Technology, School of Mathematics and Computer
+                        Science, 2018-2022</p>
+                      <p class="institution">Northwest Minzu University(XBMU)</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="publications" class="home-section wg-pages  ">
+      <div class="home-section-bg ">
+      </div>
+      <div class="container">
+        <div class="row  ">
+          <div>
+            class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+            <h1 class="mb-0">Selected Publications</h1>
+          </div>
+          <div class="col-12 col-lg-8">
+            <div class="view-list view-list-item">
+              <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+              <a href="http://ojs.bonviewpress.com/index.php/jdsis/article/view/1403">Blockchain Technology Research and Application: A Literature Review and Future Trends</a>
+              <!-- <a href="/publication/genloco_hb/">Blockchain Technology Research and Application: A Literature Review and Future Trends</a> -->
+              <br>
+              <i>Journal of Data Science and Intelligent Systems</i>
+              <br>
+              <div class="article-metadata">
+                <span>
+                  Min An</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip"
+                  title="Equal contribution"></i>, <span class="author-highlighted">,</span><span>
+                  Qiyuan Fan</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip"
+                  title="Equal contribution"></i>, <span>
+                  Hao Yu</span>, <span>
+                  Bo An</span>, <span>
+                  Nannan Wu</span>, <span>
+                  Haiyang Zhao</span>, <span>
+                  Xinhao Wan</span>, <span>
+                  Jiaxuan Li</span>, <span>
+                  Rui Wang</span>, <span>
+                  Jingyu Zhen</span>, <span>
+                  Qinyan Zou</span>, <span>
+                  Bin Zhao</span>
+              </div>
+              <div class="btn-links">
+                <a class="btn btn-outline-primary btn-page-header btn-sm" href="http://ojs.bonviewpress.com/index.php/jdsis/article/view/1403/643"
+                  target="_blank" rel="noopener">
+                  PDF
+                </a>
+                <div>  
+                  <select id="citationFormat">  
+                    <option value="bibtex">BibTeX</option>  
+                    <option value="ris">RIS</option>  
+                  </select>  
+                  <a href="#" id="citeLink" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal">  
+                    Cite  
+                  </a>  
+                </div>
+                <!-- <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+                  data-filename="/publication/a1/cite.bib">
+                  Cite
+                </a> -->
+                <a class="btn btn-outline-primary btn-page-header btn-sm"
+                  href="https://doi.org/10.47852/bonviewJDSIS32021403" target="_blank" rel="noopener">
+                  DOI
+                </a>
+                <!-- <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://youtu.be/5QUs32MjNu4"
+                  target="_blank" rel="noopener">
+                  Video Code
+                </a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="review" class="home-section wg-pages  ">
+      <div class="home-section-bg ">
+      </div>
+      <div class="container">
+        <div class="row  ">
+          <div>
+            class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+            <h1 class="mb-0">Under Review</h1>
+          </div>
+          <div class="col-12 col-lg-8">
+            <div class="view-list view-list-item">
+              <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+              <a href="">RLChain: A DRL Approach for Blockchain Performance Optimization Towards IIoT</a>
+              <b>(Under Review)</b>
+              <br>
+              <i>IEEE Transactions on Network and Service Management(TNSM)</i>
+              <br>
+              <div class="article-metadata">
+                <span>
+                  Min An</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip"
+                  title="Equal contribution"></i>, <span class="author-highlighted">,</span><span>
+                  Xuan Zhang</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip"
+                  title="Equal contribution"></i>, <span>
+                  Jishu Wang</span>, <span>
+                  Qiyuan Fan</span>, <span>
+                  Chen Gao</span>, <span>
+                  Linyu Li</span>, <span>
+                  Cuizhen Lu</span>, <span>
+                  Nan Li</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="experience" class="home-section wg-experience  ">
+      <div class="home-section-bg ">
+      </div>
+      <div class="container">
+        <div class="row  ">
+          <div
+            class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+            <h1 class="mb-0">Experience</h1>
+          </div>
+          <div class="col-12 col-lg-8">
+            <div class="row experience">
+              <div class="col-auto text-center flex-column d-none d-sm-flex">
+                <div class="row h-50">
+                  <div class="col ">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+                <div class="m-2">
+                  <span class="badge badge-pill border ">&nbsp;</span>
+                </div>
+                <div class="row h-50">
+                  <div class="col border-right">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+              </div>
+              <div class="col py-2">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex align-content-start">
+                      <div class="mr-2 mb-2">
+                        <a href="http://www.ccb.com/cn/home/indexv3.html" target="_blank" rel="noopener"></a>
+                        <img src="/picture/CCB.png" width="56px" height="56px"
+                          alt="CUHK" loading="lazy">
+                      </a>
+                        </div>
+                      <div>
+                        <div class="section-subheading card-title exp-title text-muted my-0">Fintech(Financial technology) job</div>
+                        <div class="section-subheading card-title exp-company text-muted my-0"><a
+                          href="http://www.ccb.com/cn/home/indexv3.html" target="_blank" rel="noopener">Gansu Branch of China Construction Bank Co., Ltd.</a></div>
+                        <div class="text-muted exp-meta">
+                          July 2021 –
+                          September 2021
+                          <span class="middot-divider"></span>
+                          <span>Bai ying</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <p>Responsibilities include:</p>
+                      <ul>
+                        <li>Data processing</li>
+                        <li>Promote products</li>
+                        <li>Expanding merchant</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row experience">
+              <div class="col-auto text-center flex-column d-none d-sm-flex">
+                <div class="row h-50">
+                  <div class="col ">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+                <div class="m-2">
+                  <span class="badge badge-pill border ">&nbsp;</span>
+                </div>
+                <div class="row h-50">
+                  <div class="col border-right">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+              </div>
+              <div class="col py-2">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex align-content-start">
+                      <div class="mr-2 mb-2">
+                        <a href="https://www.abchina.com/cn/" target="_blank" rel="noopener"></a>
+                        <img src="/picture/ABC.png" width="56px" height="56px"
+                          alt="CUHK" loading="lazy">
+                      </a>
+                        </div>
+                      <div>
+                        <div class="section-subheading card-title exp-title text-muted my-0">Administrative services job</div>
+                        <div class="section-subheading card-title exp-company text-muted my-0"><a
+                          href="https://www.abchina.com/cn/" target="_blank" rel="noopener">Agricultural Bank of China co., LTD. Gansu sub branch</a></div>
+                        <div class="text-muted exp-meta">
+                          August 2022 –
+                          September 2022
+                          <span class="middot-divider"></span>
+                          <span>Bai ying</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <p>Responsibilities include:</p>
+                      <ul>
+                        <li>Office business</li>
+                        <li>Document processing</li>
+                        <li>Handling rural finance business (Rural Finance Department)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row experience">
+              <div class="col-auto text-center flex-column d-none d-sm-flex">
+                <div class="row h-50">
+                  <div class="col border-right">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+                <div class="m-2">
+                  <span class="badge badge-pill border ">&nbsp;</span>
+                </div>
+                <div class="row h-50">
+                  <div class="col ">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+              </div>
+              <div class="col py-2">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex align-content-start">
+                      <div class="mr-2 mb-2">
+                        <a href="https://itshixun.com/" target="_blank" rel="noopener">
+                        <img
+                            src="/picture/QST-logo.png" width="56px" height="56px" alt="DJI" loading="lazy">
+                          </a>
+                      </div>
+                      <div>
+                        <div class="section-subheading card-title exp-title text-muted my-0">Software Engineer
+                        </div>
+                        <div class="section-subheading card-title exp-company text-muted my-0"><a
+                            href="https://itshixun.com/" target="_blank" rel="noopener">QST</a></div>
+                        <div class="text-muted exp-meta">
+                          September 2020 –
+                          October 2020
+                          <span class="middot-divider"></span>
+                          <span>Lan zhou</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-text">SSM e-commerce system back-end development</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="page-footer">
+    <div class="container">
+      <footer class="site-footer">
+        <p class="powered-by copyright-license-text">
+          © 2024 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0"
+            rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+        </p>
+        <p class="powered-by footer-license-icons">
+          <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank"
+            aria-label="Creative Commons">
+            <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+            <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+            <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+            <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+          </a>
+        </p>
+        <p class="powered-by">
+          Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank"
+            rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes"
+            target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+        </p>
+      </footer>
+    </div>
+  </div>
+  <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js"
+    integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js"
+    integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
+    crossorigin="anonymous"></script>
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js"
+    integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js"
+    integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg=="
+    crossorigin="anonymous"></script>
+  <script id="page-data" type="application/json">{"use_headroom":false}</script>
+  <script src="/en/js/wowchemy.min.0c1be879804fa6ae06a8f4c131cdbf54.js"></script>
+  <div id="modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Cite</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <pre><code></code></pre>
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+            <i class="fas fa-copy"></i> Copy
+          </a>
+          <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+            <i class="fas fa-download"></i> Download
+          </a>
+          <div id="modal-error"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+  <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=fgM0zuJ8IF3wmihxr90SY9zrDIBBaWle9D-2HWtBBjA"></script>
+  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fkirinmin.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+</body>
+
+</html>
