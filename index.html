@@ -59,24 +59,8 @@
   "url": "https://anminnuo.github.io/"
 }
 </script>
-<script>
-  $(document).ready(function() {  
-  $('#citationFormat').change(function() {  
-    var selectedFormat = $(this).val();  
-    var filename;  
-    if (selectedFormat === 'bibtex') {  
-      filename = 'cite.bib';  
-    } else if (selectedFormat === 'ris') {  
-      filename = 'cite.ris';  
-    }  
-    $('#citeLink').attr('data-filename', filename);  
-
-    });  
-  });  
-
-</script>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
- <style>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+ <!-- <style>
   .school-logo {  
     float: left; /* 让校徽浮动到左边 */  
     margin-right: 10px; /* 在校徽和描述之间添加一些间距 */  
@@ -86,6 +70,23 @@
     width: 30px; /* 设置校徽的宽度 */  
     height: 30px; /* 设置校徽的高度 */  
     vertical-align: middle; /* 垂直居中 */  
+}
+ </style> -->
+ <style>
+.description {  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+}  
+  
+.school-logo {  
+  margin-left: auto;  
+}  
+  
+.logo {  
+  display: block;  
+  max-width: 50px;  
+  height: auto;  
 }
  </style>
   <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Min An" />
@@ -210,7 +211,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/anminnuo" target="_blank" rel="noopener" aria-label="github">
+                  <a href="https://github.com/kirinmin" target="_blank" rel="noopener" aria-label="github">
                     <i class="fab fa-github big-icon"></i>
                   </a>
                 </li>
@@ -232,18 +233,18 @@
                 </li>
               </ul>
               <br>
-              <ul class="u2" aria-hidden="true">
+              <ul class="network-icon" aria-hidden="true">
                 <li>
-                  <a href="https://orcid.org/0009-0000-4769-1687" aria-label="envelope">
+                  <a href="https://orcid.org/0009-0000-4769-1687" target="_blank" rel="noopener">
                     <img
-                    src="/picture/orcid.logo.svg" width="56px" height="56px" alt="DJI" loading="lazy">
+                    src="/picture/orcid.logo.svg" width="110px" height="33px"  loading="lazy">
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.researchgate.net/profile/Min-An-9?ev=hdr_xprf&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6ImhvbWUiLCJwb3NpdGlvbiI6Imdsb2JhbEhlYWRlciJ9fQ" target="_blank"
-                    rel="noopener" aria-label="graduation-cap">
+                  <a href="https://www.researchgate.net/profile/Min-An-9?ev=hdr_xprf&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6ImhvbWUiLCJwb3NpdGlvbiI6Imdsb2JhbEhlYWRlciJ9fQ" 
+                  target="_blank" rel="noopener">
                     <img
-                    src="/picture/rg.svg" width="56px" height="56px" alt="DJI" loading="lazy">
+                    src="/picture/researchgate.svg" width="56px" height="56px"  loading="lazy">
                   </a>
                 </li>
               </ul>
@@ -271,7 +272,32 @@
                   <li>IoT</li>
                 </ul>
               </div>
-              <div class="col-md-7">
+              <div class="col-md-7">  
+                <div class="section-subheading">Education</div>  
+                <ul class="ul-edu fa-ul mb-0">  
+                  <li>  
+                    <i class="fa-li fas fa-graduation-cap"></i>  
+                    <div class="description">  
+                      <p class="course">MA.Sc/MPhil in Artificial Intelligence and Machine Learning, School of Software, 2022-2025</p>  
+                      <p class="institution">Yunnan University (YNU)</p>  
+                      <div class="school-logo">  
+                        <img src="picture/ynu2.png" alt="Yunnan University Logo" class="logo">  
+                      </div>  
+                    </div>  
+                  </li>  
+                  <li>  
+                    <i class="fa-li fas fa-graduation-cap"></i>  
+                    <div class="description">  
+                      <p class="course">B.E in Computer Science and Technology, School of Mathematics and Computer Science, 2018-2022</p>  
+                      <p class="institution">Northwest Minzu University(XBMU)</p>  
+                      <div class="school-logo">  
+                        <img src="picture/xbmu.png" alt="Northwest Minzu University Logo" class="logo">  
+                      </div>  
+                    </div>  
+                  </li>  
+                </ul>  
+              </div>
+              <!-- <div class="col-md-7">
                 <div class="section-subheading">Education</div>
                 <ul class="ul-edu fa-ul mb-0">
                   <li>
@@ -289,7 +315,7 @@
                     <i class="fa-li fas fa-graduation-cap"></i>
                     <div class="description">
                       <div class="school-logo">  
-                        <img src="picture/xbmu1.png" alt="Northwest Minzu University Logo" class="logo">  
+                        <img src="picture/xbmu.png" alt="Northwest Minzu University Logo" class="logo">  
                     </div>  
                       <p class="course">B.E in Computer Science and Technology, School of Mathematics and Computer
                         Science, 2018-2022</p>
@@ -297,7 +323,7 @@
                     </div>
                   </li>
                 </ul>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -308,8 +334,7 @@
       </div>
       <div class="container">
         <div class="row  ">
-          <div>
-            class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+          <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
             <h1 class="mb-0">Selected Publications</h1>
           </div>
           <div class="col-12 col-lg-8">
@@ -342,19 +367,10 @@
                   target="_blank" rel="noopener">
                   PDF
                 </a>
-                <div>  
-                  <select id="citationFormat">  
-                    <option value="bibtex">BibTeX</option>  
-                    <option value="ris">RIS</option>  
-                  </select>  
-                  <a href="#" id="citeLink" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal">  
-                    Cite  
-                  </a>  
-                </div>
-                <!-- <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+                <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
                   data-filename="/publication/a1/cite.bib">
                   Cite
-                </a> -->
+                </a>
                 <a class="btn btn-outline-primary btn-page-header btn-sm"
                   href="https://doi.org/10.47852/bonviewJDSIS32021403" target="_blank" rel="noopener">
                   DOI
@@ -374,8 +390,7 @@
       </div>
       <div class="container">
         <div class="row  ">
-          <div>
-            class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+          <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
             <h1 class="mb-0">Under Review</h1>
           </div>
           <div class="col-12 col-lg-8">
@@ -434,8 +449,8 @@
                     <div class="d-flex align-content-start">
                       <div class="mr-2 mb-2">
                         <a href="http://www.ccb.com/cn/home/indexv3.html" target="_blank" rel="noopener"></a>
-                        <img src="/picture/CCB.png" width="56px" height="56px"
-                          alt="CUHK" loading="lazy">
+                        <img src="/picture/CCB.png" width="200px" height="40px"
+                           loading="lazy">
                       </a>
                         </div>
                       <div>
@@ -482,8 +497,8 @@
                     <div class="d-flex align-content-start">
                       <div class="mr-2 mb-2">
                         <a href="https://www.abchina.com/cn/" target="_blank" rel="noopener"></a>
-                        <img src="/picture/ABC.png" width="56px" height="56px"
-                          alt="CUHK" loading="lazy">
+                        <img src="/picture/ABC.png" width="200px" height="40px"
+                           loading="lazy">
                       </a>
                         </div>
                       <div>
@@ -531,7 +546,7 @@
                       <div class="mr-2 mb-2">
                         <a href="https://itshixun.com/" target="_blank" rel="noopener">
                         <img
-                            src="/picture/QST-logo.png" width="56px" height="56px" alt="DJI" loading="lazy">
+                            src="/picture/QST-logo.png" width="200px" height="40px" loading="lazy">
                           </a>
                       </div>
                       <div>
@@ -631,8 +646,7 @@
       </div>
     </div>
   </div>
-  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
-  <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=fgM0zuJ8IF3wmihxr90SY9zrDIBBaWle9D-2HWtBBjA"></script>
+  <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=yWzOdGLjqKnKmRcIWG0nBKnA6Qc55hcwgjQbT3vGbaU"></script>  <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=fgM0zuJ8IF3wmihxr90SY9zrDIBBaWle9D-2HWtBBjA"></script>
   <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fkirinmin.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
 </body>
 
