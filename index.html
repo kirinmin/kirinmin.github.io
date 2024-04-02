@@ -86,6 +86,61 @@
   max-width: 50px;  
   height: auto;  
 }
+.another-class {  
+        list-style-type: none;  
+        padding: 0;  
+        display: flex;  
+        flex-direction: column;  
+        align-items: center; /* 垂直居中对齐 */  
+    }  
+.another-class li {  
+        margin-bottom: 20px; /* 调整间距 */  
+    }  
+.another-class img {  
+        vertical-align: middle; /* 图片垂直对齐 */  
+        max-width: 100%; /* 图片最大宽度为容器宽度 */  
+        height: auto; /* 图片高度自动调整，保持宽高比 */  
+    }  
+    /* 响应式设计示例 */  
+@media (max-width: 600px) {  
+    .another-class img {  
+            max-width: 80%; /* 在小屏幕上缩小图片尺寸 */  
+        }  
+    .another-class li {  
+            margin-bottom: 10px; /* 在小屏幕上减小间距 */  
+        }  
+    }  
+
+.center-image {  
+    display: flex;  
+    justify-content: center; /* 水平居中 */  
+    align-items: center; /* 垂直居中 */  
+    height: 100px; /* 假设你想要给div设置一个固定高度 */  
+}  
+  
+.center-image a {  
+    display: flex; /* 让链接也成为flex容器，以便垂直居中图片 */  
+    justify-content: center; /* 水平居中（在这个场景下可能不是必需的，因为图片本身宽度固定） */  
+    align-items: center; /* 垂直居中 */  
+    width: 100%; /* 链接宽度占满父元素 */  
+    height: 100%; /* 链接高度占满父元素 */  
+    text-decoration: none; /* 移除链接下划线 */  
+}  
+  
+.center-image img {  
+    max-width: 100%; /* 确保图片不会超出容器宽度 */  
+    height: auto; /* 保持图片的宽高比 */  
+}
+
+#map {  
+    width: 800px; 
+    height: 800px;  
+    display: flex; /* 设置为Flex容器，以便子元素（如图片和脚本）可以正确地放置 */  
+    justify-content: center; /* 水平居中子元素（如果需要的话） */  
+    align-items: center; /* 垂直居中子元素（如果需要的话） */  
+    position: relative; /* 设置定位上下文，如果子元素需要绝对定位的话 */  
+    overflow: auto; /* 如果内容超出div大小，则显示滚动条 */  
+}
  </style>
   <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Min An" />
   <title>Min An</title>
@@ -187,7 +242,7 @@
               <!-- <img class="avatar avatar-circle" width="270" height="270"
                 src="/authors/admin/avatar_huf3eeb96029b3a2cbd16af46fe4ec8c9e_84386_270x270_fill_q75_lanczos_center.jpg"
                 alt="Min An"> -->
-                <img src="/authors/admin/admin.jpg" style="margin: auto; object-fit: cover;">
+                <img src="/authors/admin/admin.jpg" width="200px" style="margin: auto; object-fit: cover; height: auto;">
               <div class="portrait-title">
                 <h2>Min An</h2>
                 <h3>Master Candidate</h3>
@@ -232,31 +287,43 @@
                 </li>
               </ul>
               <br>
-              <ul class="network-icon" aria-hidden="true">
-                <li>
+              <ul class="network-icon another-class" aria-hidden="true">  
+                <!-- <li>
                   <a href="https://orcid.org/0009-0000-4769-1687" target="_blank" rel="noopener">
                     <img
                     src="/picture/orcid.logo.svg" width="110px" height="33px"  loading="lazy">
                   </a>
                 </li>
+              
                 <li>
                   <a href="https://www.researchgate.net/profile/Min-An-9?ev=hdr_xprf&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6ImhvbWUiLCJwb3NpdGlvbiI6Imdsb2JhbEhlYWRlciJ9fQ" 
                   target="_blank" rel="noopener">
                     <img
-                    src="/picture/researchgate.svg" width="100px" height="13px"  loading="lazy">
+                    src="/picture/researchgate.svg" width="200px" height="26px"  loading="lazy">
                   </a>
-                </li>
+                </li> -->
+                <li>  
+                  <a href="https://orcid.org/0009-0000-4769-1687" target="_blank" rel="noopener">  
+                      <img src="/picture/orcid.logo.svg" alt="ORCID Logo" loading="lazy">  
+                  </a>  
+              </li>  
+              <li>  
+                  <a href="https://www.researchgate.net/profile/Min-An-9?ev=hdr_xprf&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6ImhvbWUiLCJwb3NpdGlvbiI6Imdsb2JhbEhlYWRlciJ9fQ"   
+                  target="_blank" rel="noopener">  
+                      <img src="/picture/researchgate.svg" alt="ResearchGate Logo" loading="lazy">  
+                  </a>  
+              </li>  
               </ul>
             </div>
           </div>
           <div class="col-12 col-lg-8">
             <h1>About Me</h1>
             <div class="article-style">
-              <p>A master's candidate at the School of Software, Yunnan University,  who is passionate about deep learning collaborative blockchain, focusing on utilizing deep learning methods to make blockchains work better. I am currently engaged in research that explores the use of reinforcement learning methods to optimize blockchain performance within an IoT framework.
+              <p>  A master's candidate at the School of Software, Yunnan University, passionate about deep learning collaborative blockchain, focusing on utilizing deep learning methods to make blockchains work better. I am currently engaged in research that explores the use of reinforcement learning methods to optimize blockchain performance within an IoT framework.
               <br>
-              My research interests encompass a wide range of topics including reinforcement learning, time series forecasting, blockchain technology, IoT, and federated learning.
+                My research interests encompass a wide range of topics including reinforcement learning, time series forecasting, blockchain technology, IoT, and federated learning.
               <br>
-              For more information about my work, please refer to platforms such as [<a href="https://www.researchgate.net/profile/Min-An-9?ev=hdr_xprf&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6ImhvbWUiLCJwb3NpdGlvbiI6Imdsb2JhbEhlYWRlciJ9fQ">Researchgate</a>] and [<a href="https://orcid.org/0009-0000-4769-1687">ORCID</a>].
+                For more information about my work, please refer to platforms such as [<a href="https://www.researchgate.net/profile/Min-An-9?ev=hdr_xprf&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6ImhvbWUiLCJwb3NpdGlvbiI6Imdsb2JhbEhlYWRlciJ9fQ">Researchgate</a>] and [<a href="https://orcid.org/0009-0000-4769-1687">ORCID</a>].
             </p>
               <i class="fas fa-download  pr-1 fa-fw"></i> Download my
               <a href="/uploads/CV(Min An)20230610.pdf" target="_blank">Simple CV</a>
@@ -366,8 +433,8 @@
                   target="_blank" rel="noopener">
                   PDF
                 </a>
-                <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename="/publication/a1/cite.bib" pcked="1">
-                  Cite
+                <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+                data-filename="/publication/a1/cite.bib">                  Cite
                 </a>
                 <a class="btn btn-outline-primary btn-page-header btn-sm"
                   href="https://doi.org/10.47852/bonviewJDSIS32021403" target="_blank" rel="noopener">
@@ -445,7 +512,7 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="d-flex align-content-start">
-                      <div class="mr-2 mb-2">
+                      <div class="mr-2 mb-2 center-image">
                         <a href="http://www.ccb.com/cn/home/indexv3.html" target="_blank" rel="noopener"></a>
                         <img src="/picture/CCB.png" width="200px" height="40px"
                            loading="lazy">
@@ -493,7 +560,7 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="d-flex align-content-start">
-                      <div class="mr-2 mb-2">
+                      <div class="mr-2 mb-2 center-image">
                         <a href="https://www.abchina.com/cn/" target="_blank" rel="noopener"></a>
                         <img src="/picture/ABC.png" width="200px" height="40px"
                            loading="lazy">
@@ -541,7 +608,7 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="d-flex align-content-start">
-                      <div class="mr-2 mb-2">
+                      <div class="mr-2 mb-2 center-image">
                         <a href="https://itshixun.com/" target="_blank" rel="noopener">
                         <img
                             src="/picture/QST-logo.png" width="200px" height="40px" loading="lazy">
@@ -570,6 +637,9 @@
       </div>
     </section>
   </div>
+  <div id="map">
+    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=yWzOdGLjqKnKmRcIWG0nBKnA6Qc55hcwgjQbT3vGbaU"></script>  
+  </div>
   <div class="page-footer">
     <div class="container">
       <footer class="site-footer">
@@ -592,6 +662,7 @@
             target="_blank" rel="noopener">open source</a> website builder that empowers creators.
         </p>
       </footer>
+      <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fkirinmin.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
     </div>
   </div>
   <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
@@ -644,8 +715,6 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=yWzOdGLjqKnKmRcIWG0nBKnA6Qc55hcwgjQbT3vGbaU"></script>  <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=fgM0zuJ8IF3wmihxr90SY9zrDIBBaWle9D-2HWtBBjA"></script>
-  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fkirinmin.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
 </body>
 
 </html>
