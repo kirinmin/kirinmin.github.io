@@ -98,7 +98,7 @@
     }  
 .another-class img {  
         vertical-align: middle; /* 图片垂直对齐 */  
-        /* max-width: 100%; /* 图片最大宽度为容器宽度 */   */
+        /* max-width: 100%; /* 图片最大宽度为容器宽度 */   
         height: auto; /* 图片高度自动调整，保持宽高比 */  
     }  
     /* 响应式设计示例 */  
@@ -133,9 +133,11 @@
 }
 
 #map {  
+   
+    display: flex; 
     width: 800px; 
     height: auto;  
-    display: flex; /* 设置为Flex容器，以便子元素（如图片和脚本）可以正确地放置 */  
+    margin: auto;
     justify-content: center; /* 水平居中子元素（如果需要的话） */  
     align-items: center; /* 垂直居中子元素（如果需要的话） */  
     position: relative; /* 设置定位上下文，如果子元素需要绝对定位的话 */  
@@ -638,9 +640,11 @@
       </div>
     </section>
   </div>
+<div style="width: 100%; height: 100%;">
   <div id="map">
     <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=yWzOdGLjqKnKmRcIWG0nBKnA6Qc55hcwgjQbT3vGbaU"></script>  
   </div>
+</div>
   <div class="page-footer">
     <div class="container">
       <footer class="site-footer">
