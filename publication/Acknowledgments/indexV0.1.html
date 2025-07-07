@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>硕士论文致谢</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf9 100%);
+            color: #333;
+            line-height: 1.8;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="rgba(180, 200, 220, 0.1)" stroke-width="1"/></svg>');
+            z-index: -1;
+            opacity: 0.3;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 0 30px;
+            position: relative;
+        }
+        
+        .header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(to right, transparent, #4a6fa5, transparent);
+            border-radius: 2px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #5d7aa7;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+        
+        .paper {
+            background: linear-gradient(to right, #fffdfa 0%, #fffcf7 100%);
+            border-radius: 8px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            padding: 50px 60px;
+            margin: 30px 0 50px;
+            position: relative;
+            border: 1px solid #f0e6d8;
+            transform: perspective(1000px) rotateY(1deg);
+            transition: all 0.3s ease;
+        }
+        
+        .paper:hover {
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        
+        .paper::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(to right, #d4b483, #b38b5a);
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .content {
+            font-size: 1.15rem;
+            color: #3a3a3a;
+            text-align: justify;
+            hyphens: auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .content p {
+            margin-bottom: 1.8rem;
+            text-indent: 2em;
+            position: relative;
+        }
+        
+        .content p:first-child::first-letter {
+            font-size: 3.5rem;
+            float: left;
+            line-height: 0.8;
+            margin-right: 8px;
+            color: #8a6d3b;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+        
+        .signature {
+            text-align: right;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #d4b483;
+            color: #5d7aa7;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+        
+        .date {
+            font-size: 1rem;
+            margin-top: 5px;
+            color: #7a8ca5;
+        }
+        
+        .flourish {
+            position: absolute;
+            opacity: 0.08;
+            z-index: 1;
+        }
+        
+        .flourish-1 {
+            top: 10%;
+            left: 5%;
+            font-size: 8rem;
+            transform: rotate(15deg);
+        }
+        
+        .flourish-2 {
+            bottom: 10%;
+            right: 5%;
+            font-size: 8rem;
+            transform: rotate(-15deg);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #7a8ca5;
+            font-size: 0.9rem;
+        }
+        
+        .footer a {
+            color: #5d7aa7;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer a:hover {
+            color: #2c3e50;
+            text-decoration: underline;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            background: linear-gradient(to right, #5d7aa7, #4a6fa5);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(93, 122, 167, 0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(93, 122, 167, 0.3);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .paper {
+                padding: 30px 25px;
+                margin: 20px 0;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .content {
+                font-size: 1.05rem;
+            }
+            
+            .content p:first-child::first-letter {
+                font-size: 2.8rem;
+            }
+            
+            .flourish {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header {
+                padding: 30px 0 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .paper {
+                padding: 25px 20px;
+            }
+            
+            .content {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* 夜间模式样式 */
+        body.dark-mode {
+            background: linear-gradient(135deg, #1a1f2d 0%, #0d1525 100%);
+            color: #e0e0e0;
+        }
+        
+        body.dark-mode .paper {
+            background: linear-gradient(to right, #1e2432 0%, #232a3a 100%);
+            border: 1px solid #2a3246;
+        }
+        
+        body.dark-mode .content p:first-child::first-letter {
+            color: #c9a769;
+        }
+        
+        body.dark-mode .signature {
+            color: #8da6ce;
+            border-top: 1px dashed #5d7aa7;
+        }
+        
+        body.dark-mode .date {
+            color: #8a9bb2;
+        }
+        
+        body.dark-mode .btn {
+            background: linear-gradient(to right, #6d8bc7, #5d7aa7);
+        }
+        
+        body.dark-mode .header::after {
+            background: linear-gradient(to right, transparent, #6d8bc7, transparent);
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            font-size: 1.4rem;
+            color: #2c3e50;
+            transition: all 0.3s;
+        }
+        
+        body.dark-mode .theme-toggle {
+            background: rgba(30, 35, 50, 0.9);
+            color: #c9a769;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            font-size: 1.4rem;
+            color: #2c3e50;
+            transition: all 0.3s;
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        body.dark-mode .back-to-top {
+            background: rgba(30, 35, 50, 0.9);
+            color: #c9a769;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <div class="container">
+        <div class="header">
+            <h1>硕士论文致谢</h1>
+            <div class="subtitle">行文至此，落笔为终</div>
+        </div>
+        
+        <div class="paper">
+            <div class="flourish">
+                <i class="fas fa-feather-alt"></i>
+            </div>
+            <div class="flourish flourish-1">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <div class="flourish flourish-2">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            
+            <div class="content" id="gratitudeContent">
+                <p>太华巍巍，拔海千寻；滇池淼淼，万山为襟。彩云之南，南诏故地，云大仰止，受业于此，西滇三载求学之期将尽，我想和云大再听一遍须尽欢，敬我们的初相识。庆来南路的树，明远西路的坡，泽湖的黑白天鹅和金色锦鲤，晚翠园的枇杷树，格物二栋的山玉兰开谢相继，自仰止楼至洋浦路，银杏叶飘落于岁暮之初，冬樱继银杏后翩然而至，金粉盈园，满目斑斓，软院门前的海棠三月最盛，校史馆旁四月流苏胜雪。我来时即逢春，将离时春满城。一川烟草，满城风絮，梅子黄时雨。人间四月芳菲尽，跨越时空鸿沟，这段愿与愁之旅将尽矣。修短随化，情随事迁，知不可乎骤得，托遗响于悲风，此间感怀陈迹得益于命运指引，万幸穿越人海际遇如此。行文至此，藉此文致谢硕士期间帮助我的各位师友亲朋。</p>
+                
+                <p>子在川上曰，“逝者如斯夫，不舍昼夜”。浮生皆纵，恍若南柯，世事漫如，流水纷纷，林花谢了春红，匆匆一梦浮生。夜半子时，我坐在桌前，撰写论文篇章的最后，思索时听见窗外落英缤纷，巧是冬末时节，提笔带忧愁几分，苦思冥想，话不知从何处起，只记得校园里我们处处蹀躞的身影和这段光阴所浸润的故事。人生天地间，忽如远行客，生活就是不断谢幕，不断重演，我们都在告别，告别你的我的，告别今宵往昔，告别亲朋师长。人生如逆旅，你往何处，逢着何人，生发何事，源于自我选择和冥冥之数。人生本就一场马不停蹄的相遇和告别，一段人生旅途结束的真相就是欲言又止，不过恰好这就是成长，永远有话要说却又不说。缘起缘落，花开花败，冬去春来，日出日暮，时间的脚步不停，过往为史，同窗三载，终至殊途。人生不相见，动如参与商。峨冠博带，奔赴山海，我们背起行囊，寥寥离语，各自道别。知行有术，梦无边疆；志虽千里，行则有速。云程发轫，培风图南；不啻微芒，造炬成阳，愿诸君前路坦荡，一帆风顺。</p>
+                
+                <p>落其实者思其树，饮其流者怀其源。登高而招，臂非加长也，而见者远。牛顿说：“如果我看得更远一点的话，是因为我站在巨人的肩膀上”。余出身寒微，幼居僻壤，群峦抱山，少历艰困，身履荆棘，心亦未尝懈怠。昔日负笈求学，山道崎岖，步履蹒跚，风雨常伴。虽志未尝尽堕，亦曾笔砚尘封，荒疏课业。及至远游他乡，始知世路维艰。或以门第卑微，见讥膏粱之子；或因孤陋见轻，遭斥朋侪之中。然双亲相伴，勉我向学，导我以道，遂得登堂入室，窥学问之门墙，脱尘俗之囿，见天地浩瀚。在此，要特别感谢父母对教育事业的大力支持和长期投资，有了你们的托举我方才看到更精彩和广阔的世界。为人子女，父母之恩不敢忘，寒窗十余载，俯仰流年廿六春，春秋轮转，最感激者数吾父母，他们是最普通的平凡人，却通过生活的种种考验将力所能及的幸福给予我。我是一个跳脱、调皮的孩子，幼时难驯，少佻疏礼，顽劣不羁，幸赖双亲庇佑，训诲不倦，未尝弃我于歧途，方得以入庠序之门，虽非金玉其质，亦得卒业于硕士，立身于此，非才之高也，实亲恩深重耳，诚如如沐春风，谓仰沾时雨之化。困厄之时，汝之父母总以金玉之言激励于吾，引汝振翅高飞，冀望汝勇于克难前行。感谢父母一直以来的包容、教导、理解和关心支撑我顺利完成硕士阶段的学业。今三春之晖惟以所得荣誉暂报，望椿萱并茂，棠棣同馨，金干玉桢，兰桂齐芳，门庭日益蓬勃，福泽绵延，世代荣昌，祈常安长乐，万福攸同，春华秋实，年年繁茂。</p>
+                
+                <p>立德立言，无问西东。一日师，终身父，感谢云南大学国家示范性软件学院的全体老师，润物无声，潜学为敬。千里马常有，伯乐难寻。道之所存师方存，老师培养我树立科研态度的同时也不乏为人处世道理之传递。师以己行言传身教，除吾浅薄之识，授余深厚至理，锻吾心于研途，研深悟真自此而始。载于书简之言易得，衣钵继承之物难获。书简累牍终有消散之日，精神志向可与世长存。二十余载求学光阴，最珍贵物非纸上所得浅薄之学，乃躬行事后人情练达之文章及先贤延继之精神。顺流处尚可借力而行，然学如逆水泛舟，或击流而上，或一落千丈。惟愿后学宜奉师言，善思辨而勤积累，承前人智慧，薪火相传，学术境界亦往精深。</p>
+                
+                <p>回首射雕处，暮云沉璧，恍见少年鞍马尘。人无法同时拥有青春和青春的感受，某个瞬间，蓦然回望，尽是茕茕孑立和形影相吊，打开自己的代价，是隐约闪烁的脆弱。少年不识愁滋味，识尽愁时，青衿已染霜色。启心扉则隐曜微芒，照肝胆而星霜满襟，此殆造物予人之璎珞。生命的常态是孤独，人生这趟航班，没谁会一直停留，人生的意义就是独自穿过悲喜。然少年心事当拏云，纵天地孤舟，亦持楫中流。青春兵荒马乱，吾未相负，得段汉贤、李沄朋、李嘉轩等诸君同砚，若春溪并流激荡成势，如修竹临风相扶成林，更效鸣鹤在阴之理，声应气求间，已辟云路千重。其交融心意，犹似携手登高，共赏流云之美；同谋未来，共探珍宝之境。众友相随，映雪囊萤于南窗，负笈问道于北阁，留无穷之回忆。浮生近卅春秋，吾有幸花去其中一份换来相知相遇。岁月云逝，想三载驹隙，百代流光，恍若滇池烟月，倏然过眼。风月依依，山水眷眷，既而行将别筵，临歧在迩，云程万里，愿情谊久长，吾友平安。他日江湖夜雨，但记西滇云榭。</p>
+                
+                <p>古路无行客，寒山独见君。特别感谢北京大学李林育和武汉大学马伊栋学长，他们对我硕士阶段的学习提出针对性意见，并将他们的经验毫无保留的分享给我。同时，也要感谢实验室高宸、黄河祥、马秋颖、农琼等师兄师姐，他们在科研和学习方面都给予我帮助。人海茫茫，山海隘隘，武楠楠、刘薇师姐和白梅师妹，她们是为数不多愿静心倾听余微末之言二三者，凭栏西楼时，思量星月流光皎洁，灯火阑珊处，吾亦有岁月可回首。繁华自古烟火笙歌各半，总角众人常伴余酒肆畅谈，于声色犬马间忘却世事纷扰。惟愿把酒凌虚时，皓月长照金樽里。</p>
+                
+                <p>惟江上清风与山间明月，耳聆清响，目映佳色，取用自由，无禁不竭，是造物者之无尽藏也。景慰人心，云山的风景总是在我低郁之时赐我清宁，历代数辈先贤不断向外求或向内寻的心境在云山雾罩的云顶我就可以轻易获得。科研并非躲进小楼成一统，不问春秋，闭门造车，也非亦步亦趋，人云亦云。那些灵感迸发的瞬间和人间烟火相交杂，寻常巷陌里的五光十色和人间烟火总是给科研苦旅中的我以无穷慰藉。感谢近现代以来所有革命先辈牺牲自我所换来的和平年代，感谢组织和国家对我的培养，感谢源远流长的中华上下五千年，璀璨的中华文明是我科研无措和生活迷茫时的良药，千年的曾侯乙编钟，其中不止是十二种音律，更是十二种答案和回响，望海晏河清，家国永安，中华九州繁盛。</p>
+                
+                <p>青春者，山青花欲燃之生命盛放，绣面芙蓉一笑开之欢愉浪漫也。吾辈将连峰去天不盈尺、枯松倒挂倚绝壁之征途，化为山中人自正、路险心亦平之坦荡。纵使流水落花春去也，然心中恒存山寺桃花始开之境。物不摧折，怎辨美媸，人不摧折，何言善恶。人生不过获得和失去的旅程，而我们可能也要走过很多弯路，然后在痛苦和眼泪当中，最后才能看到风景，学会成长。草树知春不久归，百般红紫斗芳菲。追梦路上，何妨吟啸且徐行。揽辔即澄清之志，登楼存忧乐之怀，多看前路风景，少谈一时输赢。从束发少年到念念不忘、心系苍生的加冠君子，再到摒弃摧眉折腰事权贵的谦谦书生，时至今日，我们依然能够挥斥方遒、指点江山、激扬文字。未来我们或将经历人面不知何处去的彷徨，到达可与人言无二三的而立之年，体悟回首萧瑟风雨归去的不惑人生，但仍怀抱桃花依旧笑春风的希望，赓续会泽百家，至公天下的云大精神。风起于青萍之末，浪成于微澜之间。希望诸君永葆“年少欢喜”的纯真少年心，唳清响于丹墀，舞飞容于金阁，洗尽铅华，珠玑不御，时光知味，岁月沉香，不以物喜，不以己悲。</p>
+                
+                <p>岁华摇落，烟火人间，三千年读史，不外功名利禄，九万里悟道，终归诗酒田园。生如蝼蚁当立鸿鹄志，命如纸薄应备不屈心。无冥冥之志者，无昭昭之明；无惛惛之事者，无赫赫之功。志之所趋，无远弗届。穷山距海，不能限也。世之奇伟瑰怪、非常之景，常在人罕至险远处，非鸿鹄志者无缘以见。长空万里乘风去，且向云深觅仙槎。希望各位同侪见过更凌厉的剑锋，铁马入梦般追求理想的执着信念依旧如昨，即使在落日余晖的人生处境，抬头也能见漫天繁星，自己做焦枯荒野上的雨，跨过人生苦海，抵达属于自己的诗与远方。抑或归去对一琴一酒，乐尽天真。生命是一次次山重水复，一次次柳暗花明。小舟从此逝，江海寄余生，人生一半山川湖海，一半自由热爱，不要试图摘月，而要月亮奔我们而来。</p>
+                
+                <p>星星之火，可煜朝阳。人生之卷，答案非一，前路漫漫亦灿灿。勿回首旧我，勿苛责往昔，彼时独行雾中，亦曾迷茫无措。世人常念未择之路，皆是繁花似锦，然人生由众择而成，非一题之取舍，乃千回百转之果也。肯綮在于守己之真，立身于道。愿君我皆执理想而行，纯粹当下而安。博尔赫斯言“时间是构成我的物质”，我们挥霍时间和消磨岁月的方式，终将决定未来。知海无涯，吾生若舟，八极九州，万千气象。我们要做永不停止的汹涌暗流，也要做静待花开的晴空飞鸟，用有限时间探索人生千百种的无限可能，去勇敢选择而不是被选择。骊歌未央，待续华章。我口袋只剩玫瑰一片，此行又山高路远，祝愿我们皆得未来的精彩纷呈。怀瑾握瑜，风禾尽起。希望我们无论何时置身何处，无论晦暗混沌，都能勇立山巅同日月星辰对话，潜游海底与江河湖海晤谈，在独特时光里熠熠生辉。</p>
+                
+                <p>人生到处知何似，应似飞鸿踏雪泥。云山苍苍，江水泱泱。去去重去去，来时是来时，最后，衷心祝愿各位帮助我的师长、同侪、亲友和家人们生活愉快，万事顺遂！同时，感谢自己的不懈努力和坚持，也祝自己前路青云直上，韶华不负，朝朝永安，岁岁长乐！</p>
+            </div>
+            
+            <div class="signature">
+                <div>云南大学软件学院1125</div>
+                <div class="date">2025年5月</div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn" id="printBtn">
+                <i class="fas fa-print"></i> 打印
+            </button>
+            <button class="btn" id="saveBtn">
+                <i class="fas fa-file-pdf"></i> 保存为PDF
+            </button>
+        </div>
+        
+        <div class="footer">
+            <!-- <p>谨以此页纪念我在云南大学的硕士生涯</p> -->
+            <p>去去重去去 来时是来时 小舟从此逝 江海寄余生</p>
+            <p>学生时代告一段落了 该如何释怀呢</p>
+            <p>© 2025 云南大学学术硕士论文致谢 </p>
+        </div>
+    </div>
+    
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 主题切换功能
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        });
+        
+        // 返回顶部功能
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 打印功能
+        const printBtn = document.getElementById('printBtn');
+        
+        printBtn.addEventListener('click', () => {
+            window.print();
+        });
+        
+        // 保存为PDF功能（模拟）
+        const saveBtn = document.getElementById('saveBtn');
+        
+        saveBtn.addEventListener('click', () => {
+            alert('此功能需要额外的PDF生成库支持，在浏览器中您可以使用打印功能选择"另存为PDF"');
+        });
+        
+        // 纸张悬停效果增强
+        const paper = document.querySelector('.paper');
+        
+        paper.addEventListener('mouseenter', () => {
+            paper.style.transform = 'perspective(1000px) rotateY(0deg)';
+        });
+        
+        paper.addEventListener('mouseleave', () => {
+            paper.style.transform = 'perspective(1000px) rotateY(1deg)';
+        });
+    </script>
+</body>
+</html>
