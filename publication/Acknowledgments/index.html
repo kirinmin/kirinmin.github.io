@@ -600,6 +600,40 @@
             }
         }
     </style>
+    <style>
+        /* 签名下方图片样式 */
+.signature-image {
+    text-align: center;
+    margin: 30px 0;
+    padding: 0 20px;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0e6d8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.responsive-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .signature-image {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .signature-image {
+        margin: 15px 0;
+    }
+}
+    </style>
     <!-- html2canvas -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js "></script>
     <!-- jsPDF -->
@@ -710,7 +744,10 @@
                 <div class="date">2025年5月</div>
             </div>
         </div>
-        
+        <!-- 插入的自适应图片 -->
+        <div class="signature-image">
+            <img src="Acknowledgments.jpg" alt="致谢证书" class="responsive-image">
+        </div>
         <div class="controls">
             <button class="btn" id="printBtn">
                 <i class="fas fa-print"></i> 打印
